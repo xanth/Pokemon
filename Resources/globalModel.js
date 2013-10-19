@@ -44,7 +44,9 @@ function switchWin( xWinName, wLable )
         pLable = cLable;
         cWin = xWinName;
         cLable = wLable;
-		
+        
+        
+		// This section saves window that the window switcher switched to into the lastWindow App.Properties.setString
 		if (cWin == mainMenuView)
 			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
 		
@@ -63,4 +65,3 @@ function switchWin( xWinName, wLable )
 		else if (cWin == settings)
 			Ti.App.Properties.setString('lastWindow', 'settings');
 }
-// Ti.include(pokemonBattleHistoryView.js);

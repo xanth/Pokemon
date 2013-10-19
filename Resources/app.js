@@ -24,6 +24,7 @@ Ti.include("pokemonViewerController.js");
 Ti.include("pokemonBattleHistoryController.js");
 Ti.include("settingsController.js");
 
+//This opens the last window that the user was on
 if(Ti.App.Properties.getBool('introWatched')){
 	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView')
 	{
@@ -41,11 +42,7 @@ if(Ti.App.Properties.getBool('introWatched')){
 	else if (Ti.App.Properties.getString('lastWindow') == 'settings')
 		switchWin(settings, 'Settings');
 }
+// This opens the start screen if the app has never been run before or if the app settings have been wiped 
 else{
 	switchWin(introWindow);
 }
-
-// function loadLastScreen() {
-        // return Ti.App.Properties.getString('lastWindow', introWindow);
-// }
-// switchWin( loadLastScreen() );

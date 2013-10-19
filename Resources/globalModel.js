@@ -49,13 +49,13 @@ function switchWin( xWinName, wLable )
 			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
 		else if (cWin == battleHistory)
 			Ti.App.Properties.setString('lastWindow', 'battleHistory');
-		else if (cWin == 'pokemonBattle')
+		else if (cWin == pokemonBattle)
 			Ti.App.Properties.setString('lastWindow', 'pokemonBattle');
-		else if (cWin == 'pokemonPicker')
+		else if (cWin == pokemonPicker)
 			Ti.App.Properties.setString('lastWindow', 'pokemonPicker');
-		else if (cWin == 'pokemonViewer')
+		else if (cWin == pokemonViewer)
 			Ti.App.Properties.setString('lastWindow', 'pokemonViewer');
-		else if (cWin == 'settings')
+		else if (cWin == settings)
 			Ti.App.Properties.setString('lastWindow', 'settings');
 }
 // Ti.include(pokemonBattleHistoryView.js);

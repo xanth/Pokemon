@@ -24,12 +24,7 @@ Ti.include("pokemonViewerController.js");
 Ti.include("pokemonBattleHistoryController.js");
 Ti.include("settingsController.js");
 
-if(!Ti.App.Properties.getBool('introWatched'))
-{
-	switchWin(introWindow);
-}
-else 
-{
+if(Ti.App.Properties.getBool('introWatched')){
 	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView')
 	{
 		var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
@@ -45,6 +40,9 @@ else
 		switchWin(pokemonViewer, 'Pokemon Viewer');
 	else if (Ti.App.Properties.getString('lastWindow') == 'settings')
 		switchWin(settings, 'Settings');
+}
+else{
+	switchWin(introWindow);
 }
 
 // function loadLastScreen() {

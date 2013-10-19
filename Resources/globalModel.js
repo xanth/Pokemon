@@ -46,7 +46,7 @@ function switchWin( xWinName, wLable )
         cLable = wLable;
         
         
-		// This section saves window that the window switcher switched to into the lastWindow App.Properties.setString
+		// This section saves window that the window switcher switched to the lastWindow App.Properties.setString
 		if (cWin == mainMenuView)
 			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
 		

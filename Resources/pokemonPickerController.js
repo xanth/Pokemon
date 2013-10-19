@@ -7,7 +7,7 @@ pickerBackButton.addEventListener('click', function(e){
 	switchWin(mainMenuView);
 });
 
-// Page Carosel 
+// Page Carosel animation
 pageCarousel2.addEventListener('touchstart', function(e){
 	var touchPos = {x: e.x, y: e.y};
 	lastTouchPosition = e.source.convertPointToView(touchPos, pokemonPicker);
@@ -25,14 +25,13 @@ pageCarousel2.addEventListener('touchmove', function(e){
 
 pageCarousel2.addEventListener('touchend', function(e){
 	// Determine which view is most in the centre of the screen
-	for (var i = 0; i < pages.length; i++)
-	{
+	for (var i = 0; i < pages.length; i++){
+		
 		var left = pageCarousel2.left + pages[i].left;
 		var right = pageCarousel2.left + pages[i].left + pages[i].width;
 		var centre = platformWidth / 2;
 		
-		if (left <= centre && right >= centre)
-		{
+		if (left <= centre && right >= centre){
 			// Move this page to the centre
 			var newLeft = (platformWidth - pages[i].width) / 2;
 			
@@ -56,4 +55,11 @@ pageCarousel2.addEventListener('touchend', function(e){
 			break;
 		}
 	}
+});
+// Add event listensers to the pages
+pages[0].addEventListener('click', function(e){
+	switchWin(mainMenuView);
+});
+pages[1].addEventListener('click', function(e){
+	switchWin(mainMenuView);
 });

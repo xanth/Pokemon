@@ -62,10 +62,15 @@ pageCarousel2.addEventListener('touchend', function (e) {
         }
     }
 });
-// Add event listensers to the pages
-page1.addEventListener('dblclick', function (e) {
-    switchWin(mainMenuView);
+
+// Add event listensers to the pages that add pokemon to the box
+dug.addEventListener('dblclick', function (e) {
+    pokemon.push(dugImg = Titanium.UI.createView({
+	backgroundImage: 'images/pokemon/dugtrio.png'
+	}));
 });
-page2.addEventListener('dblclick', function (e) {
-    switchWin(mainMenuView);
+charz.addEventListener('dblclick', function (e) {
+    pokemon.push(charzImg = Titanium.UI.createView({
+	backgroundImage: 'images/pokemon/charizard.png'
+	}));
 });

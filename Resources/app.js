@@ -36,15 +36,15 @@ else
 		switchWin(mainMenuView, text);
 	}
 	else if (Ti.App.Properties.getString('lastWindow') == 'battleHistory')
-		switchWin(battleHistory);
+		switchWin(battleHistory, 'Battle History');
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonBattle')
-		switchWin(pokemonBattle);
+		switchWin(pokemonBattle, 'Battle');
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonPicker')
-		switchWin(pokemonPicker);
+		switchWin(pokemonPicker, 'Pokemon Picker');
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonViewer')
-		switchWin(pokemonViewer);
+		switchWin(pokemonViewer, 'Pokemon Viewer');
 	else if (Ti.App.Properties.getString('lastWindow') == 'settings')
-		switchWin(settings);
+		switchWin(settings, 'Settings');
 }
 
 // function loadLastScreen() {

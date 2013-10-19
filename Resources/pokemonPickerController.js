@@ -57,9 +57,9 @@ pageCarousel2.addEventListener('touchend', function(e){
 	}
 });
 // Add event listensers to the pages
-page1.addEventListener('click', function(e){
+page1.addEventListener('dblclick', function(e){
 	switchWin(mainMenuView);
 });
-page2.addEventListener('click', function(e){
+page2.addEventListener('dblclick', function(e){
 	switchWin(mainMenuView);
 });

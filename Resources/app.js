@@ -46,6 +46,6 @@ if(Ti.App.Properties.getBool('introWatched')){
 		switchWin(settings, 'Settings');
 }
 // This opens the start screen if the app has never been run before or if the app settings have been wiped 
-else{
+if(!Ti.App.Properties.getBool('introWatched')){
 	switchWin(introWindow);
 }

@@ -80,16 +80,14 @@ var j = 0;
 function updatePickerBox ( newPkmn ) {
 	var pkmnImageWidth = 64; 
 	var pkmnImageHeight = 64;
-	for (var i = 0; i < pokemon.length; i++){
-		// How much to offset images to ensure they are centred
-		var centreOffset = (platformWidth * 0.27)  + j;
-		pokemon[i].left = centreOffset;
-		pokemon[i].width = pkmnImageWidth;
-		pokemon[i].height = pkmnImageHeight;
-		j += (pkmnImageWidth * 0.05) + pkmnImageWidth;
-		// Add view to Page Carousel
-		pickerBox.add(newPkmn);
-	}
+	// How much to offset images to ensure they are centred
+	var centreOffset = (platformWidth * 0.27)  + j;
+	pokemon[i].left = centreOffset;
+	pokemon[i].width = pkmnImageWidth;
+	pokemon[i].height = pkmnImageHeight;
+	j += (pkmnImageWidth * 0.05) + pkmnImageWidth;
+	// Add view to Page Carousel
+	pickerBox.add(newPkmn);
 }
 
 pokemonPicker.add(pickerBox);

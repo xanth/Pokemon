@@ -46,19 +46,16 @@ function switchWin( xWinName, wLable )
         cLable = wLable;
 		
 		if (cWin == mainMenuView)
-		{
-			var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
-			Ti.App.Properties.setString('lastWindow', 'mainMenuView,' + text);
-		}
+			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
 		else if (cWin == battleHistory)
-		switchWin(battleHistory, Ti.App.Properties.getString('lastWinLable'));
-		else if (Ti.App.Properties.getString('lastWindow') == 'pokemonBattle')
-		switchWin(pokemonBattle, Ti.App.Properties.getString('lastWinLable'));
-		else if (Ti.App.Properties.getString('lastWindow') == 'pokemonPicker')
-		switchWin(pokemonPicker, Ti.App.Properties.getString('lastWinLable'));
-		else if (Ti.App.Properties.getString('lastWindow') == 'pokemonViewer')
-		switchWin(pokemonViewer, Ti.App.Properties.getString('lastWinLable'));
-		else if (Ti.App.Properties.getString('lastWindow') == 'settings')
-		switchWin(settings, Ti.App.Properties.getString('lastWinLable'));
+			Ti.App.Properties.setString('lastWindow', 'battleHistory');
+		else if (cWin == 'pokemonBattle')
+			Ti.App.Properties.setString('lastWindow', 'pokemonBattle');
+		else if (cWin == 'pokemonPicker')
+			Ti.App.Properties.setString('lastWindow', 'pokemonPicker');
+		else if (cWin == 'pokemonViewer')
+			Ti.App.Properties.setString('lastWindow', 'pokemonViewer');
+		else if (cWin == 'settings')
+			Ti.App.Properties.setString('lastWindow', 'settings);
 }
 // Ti.include(pokemonBattleHistoryView.js);

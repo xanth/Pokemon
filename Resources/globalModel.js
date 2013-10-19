@@ -56,6 +56,6 @@ function switchWin( xWinName, wLable )
 		else if (cWin == 'pokemonViewer')
 			Ti.App.Properties.setString('lastWindow', 'pokemonViewer');
 		else if (cWin == 'settings')
-			Ti.App.Properties.setString('lastWindow', 'settings);
+			Ti.App.Properties.setString('lastWindow', 'settings');
 }
 // Ti.include(pokemonBattleHistoryView.js);

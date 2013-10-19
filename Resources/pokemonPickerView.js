@@ -4,15 +4,6 @@ var pokemonPicker = Ti.UI.createWindow({
 	backgroundImage: 'images/background.jpg'
 });
 
-var pickerTitle = Ti.UI.createLabel({
-	backgroundImage: 'images/titles/pickerTitle.gif',
-	center: {
-		x: platformWidth * 0.5,
-		y: platformHeight * 0.2
-	},
-	zIndex: 1
-});
-
 var pickerDoneButton = Ti.UI.createButton({
 	backgroundImage: 'images/button/done.png',
 	width: 143,
@@ -41,19 +32,18 @@ var pageCarousel2 = Titanium.UI.createView({
 // Create image views
 var pages = [];
 
-pages.push(Titanium.UI.createView({
+pages.push(page1 = Titanium.UI.createView({
 	backgroundImage: 'images/pokemonL/lPkmn01.png'
 }));
 
-pages.push(Titanium.UI.createView({
+pages.push(page2 = Titanium.UI.createView({
 	backgroundImage: 'images/pokemonL/lPkmn02.png'
 }));
 
 // Setup their positions and add to window
 var imageWidth = 250; // 250 pixels wide
 var imageHeight = 329; // 390 pixels high
-for (var i = 0; i < pages.length; i++)
-{
+for (var i = 0; i < pages.length; i++){
 	// How much to offset images to ensure they are centred
 	var centreOffset = (platformWidth - imageWidth) / 2;
 	pages[i].left = centreOffset + i * imageWidth;
@@ -64,7 +54,6 @@ for (var i = 0; i < pages.length; i++)
 	pageCarousel2.add(pages[i]);
 }
 
-pokemonPicker.add(pickerTitle);
 pokemonPicker.add(pageCarousel2);
 pokemonPicker.add(pickerDoneButton);
 pokemonPicker.add(pickerBackButton);

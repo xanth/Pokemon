@@ -57,9 +57,9 @@ pageCarousel2.addEventListener('touchend', function(e){
 	}
 });
 // Add event listensers to the pages
-pages[0].addEventListener('click', function(e){
+page1.addEventListener('click', function(e){
 	switchWin(mainMenuView);
 });
-pages[1].addEventListener('click', function(e){
+page2.addEventListener('click', function(e){
 	switchWin(mainMenuView);
 });

@@ -26,19 +26,22 @@ Ti.include("settingsController.js");
 
 //This opens the last window that the user was on
 if(Ti.App.Properties.getBool('introWatched')){
-	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView')
-	{
+	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView'){
 		var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
 		switchWin(mainMenuView, text);
 	}
 	else if (Ti.App.Properties.getString('lastWindow') == 'battleHistory')
 		switchWin(battleHistory, 'Battle History');
+	
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonBattle')
 		switchWin(pokemonBattle, 'Battle');
+	
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonPicker')
 		switchWin(pokemonPicker, 'Pokemon Picker');
+	
 	else if (Ti.App.Properties.getString('lastWindow') == 'pokemonViewer')
 		switchWin(pokemonViewer, 'Pokemon Viewer');
+	
 	else if (Ti.App.Properties.getString('lastWindow') == 'settings')
 		switchWin(settings, 'Settings');
 }

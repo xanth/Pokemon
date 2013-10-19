@@ -13,8 +13,7 @@ var cWin;
 var pWin;
 var cLable;
 var pLable;
-function switchWin( xWinName, wLable ) 
-{
+function switchWin( xWinName, wLable ) {
         if ((!xWinName && !wLable) && !pWin){
         	alert ('no prior window');
         }

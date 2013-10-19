@@ -65,12 +65,14 @@ pageCarousel2.addEventListener('touchend', function (e) {
 
 // Add event listensers to the pages that add pokemon to the box
 dug.addEventListener('dblclick', function (e) {
-    pokemon.push(dugImg = Titanium.UI.createView({
+    dugImg = Titanium.UI.createView({
 	backgroundImage: 'images/pokemon/dugtrio.png'
-	}));
+	});
+	updatePickerBox(dugImg);
 });
 charz.addEventListener('dblclick', function (e) {
-    pokemon.push(charzImg = Titanium.UI.createView({
+    charzImg = Titanium.UI.createView({
 	backgroundImage: 'images/pokemon/charizard.png'
-	}));
+	});
+	updatePickerBox(charzImg);
 });

@@ -47,14 +47,19 @@ function switchWin( xWinName, wLable )
 		
 		if (cWin == mainMenuView)
 			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
+		
 		else if (cWin == battleHistory)
 			Ti.App.Properties.setString('lastWindow', 'battleHistory');
+		
 		else if (cWin == pokemonBattle)
 			Ti.App.Properties.setString('lastWindow', 'pokemonBattle');
+		
 		else if (cWin == pokemonPicker)
 			Ti.App.Properties.setString('lastWindow', 'pokemonPicker');
+		
 		else if (cWin == pokemonViewer)
 			Ti.App.Properties.setString('lastWindow', 'pokemonViewer');
+		
 		else if (cWin == settings)
 			Ti.App.Properties.setString('lastWindow', 'settings');
 }

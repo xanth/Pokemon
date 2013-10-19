@@ -53,39 +53,54 @@ for (var i = 0; i < pages.length; i++){
 	// Add view to Page Carousel
 	pageCarousel2.add(pages[i]);
 }
-// Pokemon Box 
-var pickerBox = Ti.UI.createButton({
+// Pokemon Box image created and added to window
+var pickerBoxImg = Ti.UI.createButton({
 	backgroundImage: 'images/box.png',
 	width: 230,
 	height: 84,
 	center: {
-		x: platformWidth * 0.5,
+		x: 0,
 		y: platformHeight * 0.7
 	}
 });
+pokemonPicker.add(pickerBoxImg);
 // users pokemon to play in the battle
 var pokemon = [];
+
+pokemon.push(charzImg = Titanium.UI.createView({
+backgroundImage: 'images/pokemon/charizard.png'
+}));
+
+pokemon.push(dugImg = Titanium.UI.createView({
+backgroundImage: 'images/pokemon/dugtrio.png'
+}));
+
 // box layout
 var pickerBox = Titanium.UI.createView({
 	center: {
-		x: platformWidth * 0.5,
+		x: 0,
 		y: platformHeight * 0.7
 	}
 });
 
+function pickerBoxFunc {
 var pkmnImageWidth = 64; 
-var pkmnImageHeight = 64; 
+var pkmnImageHeight = 64;
+var j = 0; 
 for (var i = 0; i < pokemon.length; i++){
 	// How much to offset images to ensure they are centred
-	var centreOffset = (platformWidth - pkmnImageWidth) / 2;
-	pokemon[i].left = centreOffset + i * pkmnImageWidth;
+	var centreOffset = (platformWidth * 0.27)  + j;
+	pokemon[i].left = centreOffset;
 	pokemon[i].width = pkmnImageWidth;
 	pokemon[i].height = pkmnImageHeight;
-	
+	j += (pkmnImageWidth * 0.05) + pkmnImageWidth;
 	// Add view to Page Carousel
-	pageCarousel2.add(pokemon[i]);
+	pickerBox.add(pokemon[i]);
 }
+
 pokemonPicker.add(pickerBox);
 pokemonPicker.add(pageCarousel2);
 pokemonPicker.add(pickerDoneButton);
 pokemonPicker.add(pickerBackButton);
+// test
+

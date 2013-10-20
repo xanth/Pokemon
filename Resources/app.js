@@ -16,6 +16,9 @@ Ti.include("pokemonPickerView.js");
 Ti.include("pokemonViewerView.js");
 Ti.include("settingsView.js");
 
+Ti.include("introVideoView.js");
+Ti.include("introVideoController.js");
+
 Ti.include("introScreenController.js");
 Ti.include("mainMenuController.js");
 Ti.include("pokemonBattleController.js");
@@ -47,5 +50,5 @@ if(Ti.App.Properties.getBool('introWatched')){
 }
 // This opens the start screen if the app has never been run before or if the app settings have been wiped 
 if(!Ti.App.Properties.getBool('introWatched')){
-	switchWin(introWindow);
+	switchWin(introVideo);
 }

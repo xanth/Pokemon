@@ -9,7 +9,7 @@ var videoPlayer = Ti.Media.createVideoPlayer({
 	backgroundColor: '#000',
 	mediaControlStyle: Ti.Media.VIDEO_CONTROL_DEFAULT,
 	scalingMode: Ti.Media.VIDEO_SCALING_ASPECT_FIT,
-	fullscreen: true,
+	fullscreen: false,
 	autoplay: true
 });
 

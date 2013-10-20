@@ -1,7 +1,7 @@
 videoPlayer.addEventListener('complete', function(e){
 	if (e.reason == 0) {
-		introVideo.close(),
-		videoPlayer.close(),
+		introVideo.hide(),
+		// introVideo = null,
 		introWindow.open();
 	}
 });

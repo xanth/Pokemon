@@ -52,3 +52,8 @@ if(Ti.App.Properties.getBool('introWatched')){
 else if(!Ti.App.Properties.getBool('introWatched')){
 	switchWin(introVideo);
 }
+else 
+	switchWin(introVideo); {
+		var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
+		switchWin(mainMenuView, text);
+	}

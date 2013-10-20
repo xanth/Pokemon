@@ -82,9 +82,9 @@ function updatePickerBox ( newPkmn ) {
 	var pkmnImageHeight = 64;
 	// How much to offset images to ensure they are centred
 	var centreOffset = (platformWidth * 0.27)  + j;
-	pokemon[i].left = centreOffset;
-	pokemon[i].width = pkmnImageWidth;
-	pokemon[i].height = pkmnImageHeight;
+	newPkmn.left = centreOffset;
+	newPkmn.width = pkmnImageWidth;
+	newPkmn.height = pkmnImageHeight;
 	j += (pkmnImageWidth * 0.05) + pkmnImageWidth;
 	// Add view to Page Carousel
 	pickerBox.add(newPkmn);

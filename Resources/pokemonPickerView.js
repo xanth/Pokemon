@@ -94,5 +94,3 @@ pokemonPicker.add(pickerBox);
 pokemonPicker.add(pageCarousel2);
 pokemonPicker.add(pickerDoneButton);
 pokemonPicker.add(pickerBackButton);
-// test
-

@@ -20,6 +20,16 @@ var soundSwitch = Ti.UI.createSwitch({
 	}
 });
 
+var volSlider = Titanium.UI.createSlider({
+    min: 0,
+    max: 100,
+    width: '75%',
+    center: { 
+		x: platformWidth * 0.5,
+		y: platformHeight * 0.38 },
+    value: Ti.App.Properties.getDouble('volSlider', 50 )
+    });
+
 var saveImage = Ti.UI.createImageView({
   image:'images/save-setting.gif',
   	center: {
@@ -55,16 +65,6 @@ var settingsBackButton = Ti.UI.createButton({
 		y: platformHeight * 0.85
 	}
 });
-
-var volSlider = Titanium.UI.createSlider({
-    min: 0,
-    max: 100,
-    width: '75%',
-    center: { 
-		x: platformWidth * 0.5,
-		y: platformHeight * 0.35 },
-    value: Ti.App.Properties.getDouble('volSlider', 50 )
-    });
 
 settings.add(soundImage);
 settings.add(saveImage);

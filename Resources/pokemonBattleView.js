@@ -5,7 +5,7 @@ var pokemonBattle = Ti.UI.createWindow({
 });
 
 var battleArena = Ti.UI.imageView({
-	backgroundImage: 'battle.png',
+	image: 'battle.png',
 	width: 398,
 	height: 250,
 	center: {
@@ -34,5 +34,6 @@ var battleBackButton = Ti.UI.createButton({
 	}
 });
 
+pokemonBattle.add(battleArena);
 pokemonBattle.add(battleDoneButton);
 pokemonBattle.add(battleBackButton);

@@ -7,7 +7,7 @@ var introVideo = Ti.UI.createWindow({
 var f = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'video/introVid.mp4');
 
 var videoPlayer = Ti.Media.createVideoPlayer({
-	url: f,
+	url: f.nativePath,
 	backgroundColor: "blue",
 	movieControlMode: Ti.Media.VIDEO_CONTROL_NONE,
 	scalingMode: Ti.Media.VIDEO_SCALING_ASPECT_FIT,
@@ -15,4 +15,5 @@ var videoPlayer = Ti.Media.createVideoPlayer({
 	autoplay: true
 });
 
-introVideo.add(videoPlayer);
+// introVideo.add(videoPlayer);
+videoPlayer.play();

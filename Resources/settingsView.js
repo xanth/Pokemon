@@ -20,6 +20,16 @@ var soundSwitch = Ti.UI.createSwitch({
 	}
 });
 
+var volSlider = Titanium.UI.createSlider({
+    min: 0,
+    max: 100,
+    width: '75%',
+    center: { 
+		x: platformWidth * 0.5,
+		y: platformHeight * 0.36 },
+    value: Ti.App.Properties.getDouble('volSlider', 50 )
+    });
+
 var saveImage = Ti.UI.createImageView({
   image:'images/save-setting.gif',
   	center: {
@@ -62,3 +72,4 @@ settings.add(soundSwitch);
 settings.add(saveBattlesSwitch);
 settings.add(settingsBackButton);
 settings.add(rewatchIntroVideo);
+settings.add(volSlider);

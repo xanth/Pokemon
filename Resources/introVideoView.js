@@ -1,7 +1,7 @@
 var introVideo = Ti.UI.createWindow({
 	title: 'Intro Video',
 	backgroundColor: '#000000',
-	orientationModes: [Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
+	orientationModes: (Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT)
 }); 
 
 var f = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'video/introVid.mp4');

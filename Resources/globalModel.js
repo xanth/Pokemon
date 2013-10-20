@@ -48,7 +48,7 @@ function switchWin( xWinName, wLable ) {
 		// This section saves window that the window switcher switched to the lastWindow App.Properties.setString
 		if (cWin == mainMenuView) {
 			Ti.App.Properties.setString('lastWindow', 'mainMenuView');
-			playSound(main);
+			playSound('main');
 			}
 		else if (cWin == battleHistory)
 			Ti.App.Properties.setString('lastWindow', 'battleHistory');
@@ -65,9 +65,12 @@ function switchWin( xWinName, wLable ) {
 		else if (cWin == settings)
 			Ti.App.Properties.setString('lastWindow', 'settings');
 }
-function playSound ( sound ){
-	playIt = Ti.Media.createSound({
+// Setup sound
+var sound = 'main';
+playIt = Ti.Media.createSound({
     url : 'audio/'+ sound +'.wav'
 	});
+function playSound ( sound ){
 	playIt.play();
+	Ti.API.log(playIt.url);
 }

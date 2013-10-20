@@ -29,8 +29,7 @@ if(Ti.App.Properties.getBool('introWatched')){
 	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView'){
 		var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
 		switchWin(mainMenuView, text);
-		playSound(main);
-	}
+		}
 	else if (Ti.App.Properties.getString('lastWindow') == 'battleHistory')
 		switchWin(battleHistory, 'Battle History');
 	

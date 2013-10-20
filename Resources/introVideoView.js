@@ -1,6 +1,6 @@
-	var introVideo = Ti.UI.createWindow({
-	title: 'Intro Video',
-	orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
+var introVideo = Ti.UI.createWindow({
+title: 'Intro Video',
+orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
 }); 
 
 //creates the video player and plays the video 

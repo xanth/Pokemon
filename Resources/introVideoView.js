@@ -12,6 +12,6 @@ var videoPlayer = Ti.Media.createVideoPlayer({
 	fullscreen: true,
 	autoplay: true
 });
-
+Ti.App.Properties.setBool('introWatched', true);
 introVideo.add(videoPlayer);
 // videoPlayer.play();]	

@@ -7,7 +7,7 @@
 var videoPlayer = Ti.Media.createVideoPlayer({
 	url: (Ti.Filesystem.resourcesDirectory, 'video/introVid.mp4'),
 	backgroundColor: '#000',
-	movieControlMode: Ti.Media.VIDEO_CONTROL_NONE,
+	movieControlStyle: Ti.Media.VIDEO_CONTROL_EMBEDDED,
 	scalingMode: Ti.Media.VIDEO_SCALING_ASPECT_FIT,
 	fullscreen: true,
 	autoplay: true

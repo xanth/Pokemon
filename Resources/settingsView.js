@@ -26,7 +26,7 @@ var volSlider = Titanium.UI.createSlider({
     width: '75%',
     center: { 
 		x: platformWidth * 0.5,
-		y: platformHeight * 0.38 },
+		y: platformHeight * 0.36 },
     value: Ti.App.Properties.getDouble('volSlider', 50 )
     });
 

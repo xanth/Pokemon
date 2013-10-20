@@ -8,7 +8,8 @@ saveBattlesSwitch.addEventListener('change', function(e){
 });
 
 settingsBackButton.addEventListener('click', function(e){
-    switchWin(mainMenuView);
+    Ti.App.Properties.setDouble('volSlider', volSlider.value)
+    switchWin();
 });
 
 rewatchIntroVideo.addEventListener('click', function(e){

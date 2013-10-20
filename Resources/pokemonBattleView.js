@@ -1,7 +1,7 @@
 //Pokemon Battle
 var pokemonBattle = Ti.UI.createWindow({
 	title: 'Pokemon Battle',
-	backgroundImage: 'images/battle-background.jpg'
+	backgroundImage: 'background.jpg'
 });
 
 

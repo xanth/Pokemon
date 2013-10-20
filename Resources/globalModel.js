@@ -71,6 +71,9 @@ playIt = Ti.Media.createSound({
     url : 'audio/'+ sound +'.wav'
 	});
 function playSound ( sound ){
+	playIt.volume = Ti.App.Properties.getDouble('volSlider', 50 ) * 0.01
+	if (Ti.App.Properties.getBool('saveBattlesSwitch', true)) {
 	playIt.play();
 	Ti.API.log(playIt.url);
+	}
 }

@@ -56,9 +56,20 @@ var settingsBackButton = Ti.UI.createButton({
 	}
 });
 
+var volSlider = Titanium.UI.createSlider({
+    min: 0,
+    max: 100,
+    width: '75%',
+    center: { 
+		x: platformWidth * 0.5,
+		y: platformHeight * 0.35 },
+    value: Ti.App.Properties.getDouble('volSlider', 50 )
+    });
+
 settings.add(soundImage);
 settings.add(saveImage);
 settings.add(soundSwitch);
 settings.add(saveBattlesSwitch);
 settings.add(settingsBackButton);
 settings.add(rewatchIntroVideo);
+settings.add(volSlider);

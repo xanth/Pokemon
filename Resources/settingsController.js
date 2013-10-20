@@ -1,5 +1,6 @@
 soundSwitch.addEventListener('change', function(e){
   Ti.App.Properties.setBool('soundSwitch', soundSwitch.value);
+  Ti.App.Properties.setDouble('volSlider', volSlider.value)
 });
 
 saveBattlesSwitch.addEventListener('change', function(e){

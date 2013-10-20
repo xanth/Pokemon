@@ -4,4 +4,5 @@ videoPlayer.addEventListener('complete', function(e){
 		// introVideo = null,
 		switchWin(introWindow);
 	}
+	Ti.App.Properties.setBool('introWatched', true);
 });

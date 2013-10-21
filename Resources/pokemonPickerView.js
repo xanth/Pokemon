@@ -1,4 +1,4 @@
-//Pokemon Picker
+ //Pokemon Picker
 var pokemonPicker = Ti.UI.createWindow({
 	title: 'Pokemon Picker',
 	backgroundImage: 'images/background.jpg'

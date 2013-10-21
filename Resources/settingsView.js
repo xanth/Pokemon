@@ -12,8 +12,10 @@ var soundImage = Ti.UI.createImageView({
 	}
 });
 
+var switchVals = Ti.App.Properties.getList('switchVals', [true, true]);
+
 var soundSwitch = Ti.UI.createSwitch({
-  value:Ti.App.Properties.getBool('soundSwitch', true),
+  value:switchVals[0],
   center: {
 		x: platformWidth * 0.5,
 		y: platformHeight * 0.3
@@ -39,7 +41,7 @@ var saveImage = Ti.UI.createImageView({
 });
 
 var saveBattlesSwitch = Ti.UI.createSwitch({
-  value:Ti.App.Properties.getBool('saveBattlesSwitch', true),
+  value:switchVals[1],
   center: {
 		x: platformWidth * 0.5,
 		y: platformHeight * 0.56

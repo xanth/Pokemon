@@ -1,5 +1,6 @@
 soundSwitch.addEventListener('change', function(e){
-  Ti.App.Properties.setBool('soundSwitch', soundSwitch.value);
+	switchVals = [soundSwitch.value, saveBattlesSwitch.value]
+	Ti.App.Properties.setList('switchVals', switchVals);
 });
 
 volSlider.addEventListener('change', function(e) {
@@ -7,7 +8,8 @@ volSlider.addEventListener('change', function(e) {
 });
 
 saveBattlesSwitch.addEventListener('change', function(e){
-  Ti.App.Properties.setBool('saveBattlesSwitch', saveBattlesSwitch.value);
+	switchVals = [soundSwitch.value, saveBattlesSwitch.value]
+	Ti.App.Properties.setList('switchVals', switchVals);
 });
 
 settingsBackButton.addEventListener('click', function(e){

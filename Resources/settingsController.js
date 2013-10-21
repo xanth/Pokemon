@@ -11,7 +11,7 @@ saveBattlesSwitch.addEventListener('change', function(e){
 });
 
 settingsBackButton.addEventListener('click', function(e){
-    switchWin();
+    switchWin(mainMenuView);
 });
 
 rewatchIntroVideo.addEventListener('click', function(e){

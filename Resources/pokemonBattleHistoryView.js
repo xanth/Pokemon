@@ -48,9 +48,25 @@ var goButton = Ti.UI.createButton({
 	}
 });
 
-historyPicker.add(battleHistoryData);
+var shareButton = Ti.UI.createButton({
+	backgroundImage: 'images/labelBackground.png',
+	title: "Share",
+	color: 'white',
+	width: 150,
+	height: 52,
+	center: {
+		y: platformHeight* 0.7
+	}
+});
 
+var emailDialog = Titanium.UI.createEmailDialog();
+emailDialog.setSubject('I just played The Pokémon Battle App');
+emailDialog.setToRecipients(['']);
+emailDialog.setMessageBody('Play The Pokémon Battle App its the best game ever! \n http://app.pokemon.com/');
+
+historyPicker.add(battleHistoryData);
 battleHistory.add(pickerLabel);
 battleHistory.add(historyPicker);
 battleHistory.add(goButton);
+battleHistory.add(shareButton);
 battleHistory.add(historyBackButton);

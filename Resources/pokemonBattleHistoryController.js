@@ -13,7 +13,7 @@ shareButton.addEventListener('click', function(e){
 
 emailDialog.addEventListener('complete',function(e) {
     if (e.result == emailDialog.SENT) {
-        alert("message was sent");
+        alert("message was not sent");
         }
     else {
         alert("message was not sent. result = " + e.result);

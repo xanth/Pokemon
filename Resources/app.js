@@ -28,7 +28,7 @@ Ti.include("pokemonBattleHistoryController.js");
 Ti.include("settingsController.js");
 
 //This opens the last window that the user was on
-if(Ti.App.Properties.getBool('introWatched')){
+if(Ti.App.Properties.getBool('introWatched') == false){
 	if (Ti.App.Properties.getString('lastWindow') == 'mainMenuView'){
 		var text = 'Welcome ' + Ti.App.Properties.getString("PlayerName");
 		switchWin(mainMenuView, text);
@@ -49,6 +49,7 @@ if(Ti.App.Properties.getBool('introWatched')){
 		switchWin(settings, 'Settings');
 }
 // This opens the start screen if the app has never been run before or if the app settings have been wiped 
-if(!Ti.App.Properties.getBool('introWatched')){
-	switchWin(pokemonBattle);
+else if(Ti.App.Properties.getBool('introWatched', true)){
+	introVideo.open();
+	Ti.API.log("starting vid")
 }

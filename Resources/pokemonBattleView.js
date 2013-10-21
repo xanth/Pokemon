@@ -1,9 +1,18 @@
 //Pokemon Battle
 var pokemonBattle = Ti.UI.createWindow({
 	title: 'Pokemon Battle',
-	backgroundImage: 'images/battle-background.jpg'
+	backgroundImage: 'background.jpg'
 });
 
+var battleArena = Titanium.UI.ImageView({
+	image: 'battle.png',
+	width: 398,
+	height: 250,
+	center: {
+		x: platformWidth * 0.5,
+		y: platformHeight * 0.35
+	}
+});
 
 var battleDoneButton = Ti.UI.createButton({
 	backgroundImage: 'images/button/done.png',
@@ -25,5 +34,6 @@ var battleBackButton = Ti.UI.createButton({
 	}
 });
 
+pokemonBattle.add(battleArena);
 pokemonBattle.add(battleDoneButton);
 pokemonBattle.add(battleBackButton);

@@ -15,5 +15,5 @@ settingsBackButton.addEventListener('click', function(e){
 });
 
 rewatchIntroVideo.addEventListener('click', function(e){
-	switchWin(introWindow);
+	introVideo.open();
 });

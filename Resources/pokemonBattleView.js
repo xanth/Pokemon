@@ -5,9 +5,7 @@ var pokemonBattle = Ti.UI.createWindow({
 });
 
 var battleArena = Titanium.UI.ImageView({
-	image: 'battle.png',
-	width: 398,
-	height: 250,
+	image: 'images/battle.png',
 	center: {
 		x: platformWidth * 0.5,
 		y: platformHeight * 0.35

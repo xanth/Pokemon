@@ -72,7 +72,7 @@ playIt = Ti.Media.createSound({
 	});
 function playSound ( sound ){
 	
-	playIt.volume = Ti.App.Properties.getDouble('volSlider', 50 ) * 0.01
+	playIt.volume = Ti.App.Properties.getDouble('volSlider', 50 ) * 0.01;
 	
 	if (Ti.App.Properties.getBool('soundSwitch', true)) {
 		playIt.play();

@@ -51,5 +51,5 @@ if(Ti.App.Properties.getBool('introWatched') == false){
 // This opens the start screen if the app has never been run before or if the app settings have been wiped 
 else if(Ti.App.Properties.getBool('introWatched', true)){
 	introVideo.open();
-	Ti.API.log("starting vid")
+	Ti.API.log("starting vid");
 }
